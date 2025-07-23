@@ -20,7 +20,7 @@ php artisan vendor:publish --tag=config
 
 
 ## ENV setting
-
+MAIL_MAILER=entra
 ENTRA_CLIENT_ID=your_client_id
 ENTRA_CLIENT_SECRET=your_client_secret
 ENTRA_TENANT_ID=your_tenant_id

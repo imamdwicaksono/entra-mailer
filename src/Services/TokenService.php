@@ -2,8 +2,8 @@
 
 namespace Mmsgilibrary\EntraMailer\Services;
 
-use GuzzleHttp\Client;
-use function config; // ← ini penting agar config() bisa dikenali
+use GuzzleHttp\Client; // ← ini penting agar config() bisa dikenali
+use function config;
 
 class TokenService
 {

@@ -8,15 +8,16 @@ use function config_path; // ← agar dikenali oleh Intelephense
 
 class EntraMailerServiceProvider extends ServiceProvider
 {
-    public function register()
-    {
-        $this->mergeConfigFrom(__DIR__ . '/Config/entra-mailer.php', 'entra-mailer');
-    }
-
     public function boot()
-    {
-        $this->publishes([
-            __DIR__ . '/Config/entra-mailer.php' => config_path('entra-mailer.php'),
-        ], 'config');
-    }
+{
+    // Publikasi config
+    $this->publishes([
+        __DIR__ . '/Config/entra-mailer.php' => config_path('entra-mailer.php'),
+    ], 'config');
+
+    // Registrasi transport
+    Mail::extend('entra', function (array $config = []) {
+        return new EntraTransport();
+    });
+}
 }

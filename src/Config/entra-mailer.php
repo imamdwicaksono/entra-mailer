@@ -1,3 +1,5 @@
+<?php
+
 return [
     'client_id' => env('ENTRA_CLIENT_ID'),
     'client_secret' => env('ENTRA_CLIENT_SECRET'),
