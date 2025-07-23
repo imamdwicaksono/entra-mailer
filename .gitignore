@@ -1,0 +1,21 @@
+# Composer dependencies
+/vendor
+
+# Laravel specific
+/.idea
+/.vscode
+/.phpunit.result.cache
+/.env
+.env.*
+.env.local
+Homestead.yaml
+Homestead.json
+
+# Laravel compiled files
+/storage/*.key
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+
+# Node dependencies (if any)

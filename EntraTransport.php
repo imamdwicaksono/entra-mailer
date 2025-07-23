@@ -4,9 +4,11 @@ namespace Mmsgilibrary\EntraMailer;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mime\RawMessage;
-use YourVendor\EntraMailer\Services\TokenService;
+use Mmsgilibrary\EntraMailer\Services\TokenService;
 use GuzzleHttp\Client;
 use Symfony\Component\Mime\Email;
+
+use function config; // ← agar config() dikenali
 
 class EntraTransport extends AbstractTransport
 {

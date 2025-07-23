@@ -1,9 +1,10 @@
 <?php
 
-namespace YourVendor\EntraMailer\Mail;
+namespace Mmsgilibrary\EntraMailer\Mail;
 
-use YourVendor\EntraMailer\Services\TokenService;
+use Mmsgilibrary\EntraMailer\Services\TokenService;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Config;
 
 class EntraMailer
 {
@@ -12,7 +13,7 @@ class EntraMailer
         $token = TokenService::getAccessToken();
 
         $client = new Client();
-        $res = $client->post('https://graph.microsoft.com/v1.0/users/' . config('entra-mailer.from_address') . '/sendMail', [
+        $res = $client->post('https://graph.microsoft.com/v1.0/users/' . Config::get('entra-mailer.from_address') . '/sendMail', [
             'headers' => [
                 'Authorization' => "Bearer $token",
                 'Content-Type' => 'application/json',
@@ -29,8 +30,8 @@ class EntraMailer
                     ],
                     'from' => [
                         'emailAddress' => [
-                            'address' => config('entra-mailer.from_address'),
-                            'name' => config('entra-mailer.from_name')
+                            'address' => Config::get('entra-mailer.from_address'),
+                            'name' => Config::get('entra-mailer.from_name')
                         ]
                     ]
                 ]
