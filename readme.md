@@ -26,3 +26,15 @@ ENTRA_CLIENT_SECRET=your_client_secret
 ENTRA_TENANT_ID=your_tenant_id
 ENTRA_FROM_ADDRESS=your_sender@domain.com
 ENTRA_FROM_NAME=Your Name
+
+## Configuration
+
+Add this to your `config/mail.php`:
+
+```php
+'mailers' => [
+    ...
+    'entra' => [
+        'transport' => 'entra',
+    ],
+],
