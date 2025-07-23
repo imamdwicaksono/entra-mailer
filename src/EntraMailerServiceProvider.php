@@ -5,6 +5,7 @@ namespace Mmsgilibrary\EntraMailer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Mail;
 use function config_path; // ← agar dikenali oleh Intelephense
+use Mmsgilibrary\EntraMailer\EntraTransport;
 
 class EntraMailerServiceProvider extends ServiceProvider
 {
