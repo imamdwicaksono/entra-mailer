@@ -38,3 +38,6 @@ Add this to your `config/mail.php`:
         'transport' => 'entra',
     ],
 ],
+
+## use
+Mail::mailer('entra')->to('target@example.com')->send(new YourMailable());
