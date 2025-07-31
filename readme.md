@@ -15,7 +15,7 @@ Send emails using Microsoft Entra ID (Azure AD / Microsoft 365) with OAuth2 auth
 ## 🛠 Installation
 
 ```bash
-composer require yourvendor/entra-mailer
+composer require mmsgi-library/entra-mailer
 php artisan vendor:publish --tag=config
 
 
